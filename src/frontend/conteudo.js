@@ -15,7 +15,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
     recognition.onstart = function () {
         recognizing = true;
-        document.getElementById("ditarRealizado").innerHTML = "Fale agora";
+        document.getElementById("ditarRealizado").innerHTML = "<span class=\"fa fa-microphone-slash\"></span> Parar";
     };
 
     recognition.onerror = function (event) {
