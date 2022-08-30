@@ -46,6 +46,7 @@ suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est 
                 <label for="realizado" class="form-label">Conteúdo realizado</label>
                 <textarea id="realizado" name="realizado" class="form-control" rows="3"></textarea>
                 <a href="javascript:void(0)" onclick="copiarConteudo()" role="button" class="btn btn-secondary btn-sm mt-1 w-100">Copiar do previsto</a>
+                <a id="ditarRealizado" href="javascript:void(0)" onclick="ditarRealizado(event)" role="button" class="btn btn-secondary btn-sm mt-1 w-100" style="display:none"><span class="fa fa-microphone"></span> Ditar</a>
             </div>
             <div class="mb-4 form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="possuiTarefa" name="possuiTarefa" value="S" onchange="habilitarTarefa()">
@@ -87,6 +88,7 @@ suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est 
 
     </div>
 
+    <script src="conteudo.js" type="text/javascript"></script>
 </body>
 
 </html>
