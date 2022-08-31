@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    font-family: 'Pacifico', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modal-content .modal-body, .modal-content .modal-footer button {
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.modal-content .modal-footer button {
+    border: 0;
+}
+
+.modal-content .modal-footer .btn-primary {
+    background-color: #114f0e;
+}
+
+.modal-content .modal-footer .btn-secondary {
+    background-color: #8de3a4;
+}
+/* 
+ {
+    border-radius: 10px;
+    font-family: sans-serif;
+} */
