@@ -6,3 +6,5 @@ https://www.twilio.com/blog/speech-recognition-browser-web-speech-api
 
 https://www.google.com/intl/en/chrome/demos/speech.html
 
+https://codeburst.io/html5-speech-recognition-api-670846a50e92
+
