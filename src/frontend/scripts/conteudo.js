@@ -4,13 +4,11 @@ const copiarConteudo = function() {
 }
 
 const habilitarTarefa = function() {
-    let checked = $("#possuiTarefa").is(':checked'); //document.getElementById('possuiTarefa').checked;
+    let checked = $("#possuiTarefa").is(':checked');
     if (checked) {
         $("#camposTarefa").css("display", "");
-        //document.getElementById('camposTarefa').style.display = "";
     } else {
         $("#camposTarefa").css("display", "none");
-        //document.getElementById('camposTarefa').style.display = "none";
     }
 }
 
