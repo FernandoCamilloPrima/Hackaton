@@ -5,6 +5,7 @@
     background-color: #8de3a4;
     color: #114f0e;
     margin-bottom: 2rem;
+
 }
 
 .img-cabecalho {
@@ -36,6 +37,10 @@
 
 .btn-cabecalho i {
     font-size: 24px;
+}
+
+.btn {
+    border-radius: 10px;
 }
 
 .btn-primary {

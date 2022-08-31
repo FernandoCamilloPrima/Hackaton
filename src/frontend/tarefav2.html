@@ -40,19 +40,19 @@
             <div class="card mt-5 mb-3" style="background-color: #eeeeee">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-9">
                             <span class="fa fa-user"></span> Abel Pereira Goulart
                         </div>
-                        <div class="col-sm-6 text-end">
+                        <div class="col-3 text-end">
                             <div class="btn-group btn-group-sm w-100" role="group" aria-label="Entrega">
                                 <input type="radio" class="btn-check" name="btnentregou1" id="btnentregou1S" autocomplete="off" checked>
-                                <label class="btn btn-outline-success" for="btnentregou1S">Entregou</label>
+                                <label class="btn btn-outline-success" for="btnentregou1S" title="Entregou">E</label>
                               
                                 <input type="radio" class="btn-check" name="btnentregou1" id="btnentregou1N" autocomplete="off">
-                                <label class="btn btn-outline-danger" for="btnentregou1N">Não entregou</label>
+                                <label class="btn btn-outline-danger" for="btnentregou1N" title="Não entregou">N</label>
                               
                                 <input type="radio" class="btn-check" name="btnentregou1" id="btnentregou1I" autocomplete="off">
-                                <label class="btn btn-outline-warning" for="btnentregou1I">Incompleta</label>
+                                <label class="btn btn-outline-warning" for="btnentregou1I" title="Incompleta">I</label>
                               </div>
                         </div>
                     </div>
@@ -241,11 +241,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-8">
-                            <span class="fa fa-user"></span> Abel Pereira Goulart
+                            <!--<span class="fa fa-user"></span>--> Abel Pereira Goulart
                         </div>
                         <div class="col-sm-4 text-end">
-                            <a role="button" class="btn btn-sm btn-success w-100 stretched-link">
-                                <span class="fa fa-check" style="margin-right: 5px;"></span> Entregou
+                            <a id="entrega1" href="javascript:void(0)" onclick="alternar1()" role="button" class="btn btn-sm btn-success w-100 stretched-link">
+                                <span class="fa fa-check" style="margin-right: 5px;"></span> Entregou <span class="fa fa-caret-down" style="margin-left: 5px;"></span>
                             </a>
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                 <div class="card-body">
                     <div class="row text-body">
                         <div class="col-sm-8">
-                            <span class="fa fa-user"></span> Caio de Oliveira Ramos
+                            <!--<span class="fa fa-user"></span>--> Caio de Oliveira Ramos
                         </div>
                         <div class="col-sm-4 text-end">
                             <a role="button" class="btn btn-sm btn-warning w-100 stretched-link">
@@ -269,7 +269,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-8">
-                            <span class="fa fa-user"></span> Maria Aparecida dos Santos
+                            <!--<span class="fa fa-user"></span>--> Maria Aparecida dos Santos
                         </div>
                         <div class="col-sm-4 text-end">
                             <a role="button" class="btn btn-sm btn-danger w-100 stretched-link">

@@ -8,3 +8,4 @@ https://www.google.com/intl/en/chrome/demos/speech.html
 
 https://codeburst.io/html5-speech-recognition-api-670846a50e92
 
+https://stackoverflow.com/questions/57296227/repeat-block-of-div-with-different-data-from-server
