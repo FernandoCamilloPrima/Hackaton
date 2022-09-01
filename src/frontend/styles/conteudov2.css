@@ -86,3 +86,30 @@
     font-family: sans-serif;
     color: #114f0e;
 }
+
+.btn-navegacao {
+    position: fixed;
+    top: 50%;
+    background-color: #114f0e;
+    height: 28px;
+    width: 28px;
+    border-radius: 10px;
+    border: 0;
+  }
+  
+  .btn-navegacao i {
+    font-weight: bolder;
+    font-size: 15px;
+    color: #fff;
+    top: 0;
+    height: 28px;
+    width: 28px;
+  }
+  
+  .btn-navegacao-anterior {
+    left: 0;
+  }
+  
+  .btn-navegacao-proximo {
+    right: 0;
+  }
