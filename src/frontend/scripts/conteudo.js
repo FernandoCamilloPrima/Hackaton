@@ -73,6 +73,7 @@ const carregarTela = function() {
         <h3 class="topo-texto">Aula ${dados.aula}, ${dados.disciplina.toHtmlEntities()}</h3>
     `);
     $("#dataAula").html(dados.dia);
+    //$("#horaAula").html(dados.hora);
     $("#turma").html(dados.turma.toHtmlEntities());
     $("#previsto").val(dados.conteudoPrevisto);
     $("#realizado").val(dados.conteudoRealizado);

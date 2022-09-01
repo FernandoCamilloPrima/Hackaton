@@ -132,6 +132,16 @@
     z-index: 9999;
 }
 
+.topo-flex {
+    display: flex; 
+    align-items: center;
+}
+
+.topo-voltar {
+    font-size: 32px; 
+    width: 50px;
+}
+
 .topo-texto {
     font-weight: bold;
     font-size: 30px;
@@ -153,4 +163,36 @@
 }
 .btn-acao-principal:hover {
     color: white;
+}
+
+.container-principal {
+    margin-top: 90px;
+}
+
+.data-hora-aula {
+    font-size: 25px; 
+    font-weight:bold;
+    color: #00B8AD;
+}
+
+.data-hora-aula-span {
+    color: #00B8AD";
+}
+
+.data-hora-aula i {
+    color: #00B8AD; 
+    font-size: 21px; 
+    font-weight: bold;
+}
+
+.aula-turma {
+    font-size: 20px;
+}
+
+.borda-topo-padrao {
+    border-top: 2px solid #EEEEEE;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

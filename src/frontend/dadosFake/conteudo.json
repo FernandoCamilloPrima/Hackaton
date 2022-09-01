@@ -5,6 +5,7 @@
     "turma": "5º ano A",
     "aula": 34,
     "dia": "29 AGO",
+    "hora": "10:40",
     "conteudoPrevisto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac fringilla arcu.",
     "conteudoRealizado": "",
     "possuiTarefa": false,
