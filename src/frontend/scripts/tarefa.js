@@ -122,7 +122,7 @@ const carregarTela = function() {
 
 const carregarDados = function() {
     //TODO: Obter dados do servidor
-    var jqxhr = $.getJSON("dadosFake/tarefas.json", function (data) {
+    var jqxhr = $.getJSON("dadosFake/tarefas.json?x=" + new Date().getTime(), function (data) {
         dados = data;
         carregarTela();
         $("#botoesOperacoes").show();

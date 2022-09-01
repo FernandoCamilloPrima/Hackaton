@@ -1,7 +1,19 @@
+String.prototype.toHtmlEntities = function() {
+    return this.replace(/./gm, function(s) {
+        // return "&#" + s.charCodeAt(0) + ";";
+        return (s.match(/[a-z0-9\s]+/i)) ? s : "&#" + s.charCodeAt(0) + ";";
+    });
+};
+
+
+let dados = {};
+
+
 const copiarConteudo = function() {
     let previsto = $("#previsto").val();
     $("#realizado").val(previsto);
 }
+
 
 const habilitarTarefa = function() {
     let checked = $("#possuiTarefa").is(':checked');
@@ -11,6 +23,111 @@ const habilitarTarefa = function() {
         $("#camposTarefa").css("display", "none");
     }
 }
+
+
+const excluirAnexo = function(codigoAnexo) {
+    if (dados.anexos) {
+        for (i = 0; i < dados.anexos.length; i++) {
+            if (dados.anexos[i].codigo == codigoAnexo) {
+                dados.anexos.splice(i, 1);
+                break;
+            }
+        }
+        carregarListaDeAnexos();
+    }
+}
+
+
+const baixarAnexo = function(codigoAnexo) {
+    if (dados.anexos) {
+        for (i = 0; i < dados.anexos.length; i++) {
+            if (dados.anexos[i].codigo == codigoAnexo) {
+                window.alert("Download de " + dados.anexos[i].nome + "...");
+                break;
+            }
+        }
+    }
+}
+
+
+const uploadAnexo = function() {
+    $("#inputFileAnexo").click();
+}
+
+
+const handleFiles = function(files) {
+    $.each(files, function(i, file) {
+        dados.anexos.push(
+            {
+                codigo: ((new Date().getTime()) + Math.random()) * -1,
+                nome: file.name
+            }
+        )
+    });
+    carregarListaDeAnexos();
+}
+
+
+const carregarTela = function() {
+    $("#dadosGerais").html(`
+        <h2>${dados.periodo.toHtmlEntities()} - ${dados.disciplina.toHtmlEntities()} - ${dados.turma.toHtmlEntities()}</h2>
+        <h3>Aula ${dados.aula} - ${dados.dia}</h3>
+    `);
+
+    $("#previsto").val(dados.conteudoPrevisto);
+    $("#realizado").val(dados.conteudoRealizado);
+    $("#possuiTarefa").prop("checked", dados.possuiTarefa);
+    
+    habilitarTarefa();
+
+    if (dados.possuiTarefa) {
+        $("#realizado").val(dados.conteudoTarefa);
+        if (dados.dataEntregaTarefa) {
+            $("#dataTarefa").val(dados.dataEntregaTarefa.substring(6) + "-" + dados.dataEntregaTarefa.substring(3,5) + "-" + dados.dataEntregaTarefa.substring(0,2));
+        }
+        carregarListaDeAnexos();
+    }
+}
+
+
+const carregarListaDeAnexos = function() {
+    $('#anexosTarefa').html("");
+    $.each(dados.anexos, function(i, anexo) {
+        $('#anexosTarefa').append(`
+            <li data-codigo="${anexo.codigo}" class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="javascript:void(0)" onclick="baixarAnexo(${anexo.codigo})">${anexo.nome.toHtmlEntities()}</a>
+                <a href="javascript:void(0)" onclick="excluirAnexo(${anexo.codigo})"><span class="text-dark fa fa-trash-can"></span></a>
+            </li>
+        `);
+    });
+}
+
+
+const carregarDados = function() {
+    //TODO: Obter dados do servidor
+    var jqxhr = $.getJSON("dadosFake/conteudo.json?x=" + new Date().getTime(), function (data) {
+        dados = data;
+        carregarTela();
+        $("#formulario").show();
+    });
+}
+
+
+const botaoSalvar = function() {
+    //TODO: Salvar no servidor
+    window.alert("Faz de conta que salvou...");
+    botaoVoltar();
+}
+
+
+const botaoVoltar = function() {
+    window.location="home.html";
+}
+
+
+$(function() {
+    carregarDados();
+});
 
 
 // === Parte do reconhecimento de voz:

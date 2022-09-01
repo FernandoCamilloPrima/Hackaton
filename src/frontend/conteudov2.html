@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+    <!-- <header class="cabecalho">
         <div class="img-cabecalho">
               <img src="./images/logo.png" alt="Matéria Lecionada">
         </div>
@@ -20,18 +20,16 @@
         <button type="button" class="btn-cabecalho" data-bs-toggle="modal" data-bs-target="#logoutModal">
               <i class="bi bi-person-circle"></i>
         </button>
-    </header>
+    </header> -->
 
     <div class="container">
-        <h2>2022 - Matemática - 5º A</h2>
-        <h3>Aula 34 - 29/08/2022</h3>
+        <div id="dadosGerais">
+        </div>
 
-        <form>
+        <div id="formulario" style="display: none;">
             <div class="mt-3 mb-4">
                 <label for="previsto" class="form-label">Conteúdo previsto</label>
-                <textarea id="previsto" name="previsto" class="form-control" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac fringilla arcu. Donec vel dolor auctor, cursus
-turpis a, sagittis elit. Duis viverra eleifend urna id ullamcorper. Maecenas dapibus justo et porta semper. Etiam
-suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est at, mattis quam.</textarea>
+                <textarea id="previsto" name="previsto" class="form-control" rows="3"></textarea>
             </div>
             <div class="mb-4">
                 <label for="realizado" class="form-label">Conteúdo realizado</label>
@@ -50,17 +48,9 @@ suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est 
                 </div>
                 <div class="mb-4">
                     <label class="form-label">Anexos</label>
-                    <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Lista de exercícios 1.pdf
-                            <span class="badge fa fa-trash-can"><span class="text-dark fa fa-trash-can"></span></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Fórmulas.jpg
-                            <span class="badge fa fa-trash-can"><span class="text-dark fa fa-trash-can"></span></span>
-                        </li>
+                    <ul id="anexosTarefa" class="list-group">
                     </ul>
-                    <a href="javascript:void(0)" role="button" class="btn btn-secondary btn-sm mt-1 w-100">Anexar arquivo(s)</a>
+                    <a href="javascript:void(0)" onclick="uploadAnexo()" role="button" class="btn btn-secondary btn-sm mt-1 w-100">Anexar arquivo(s)</a>
                 </div>
                 <div class="mb-4">
                     <label for="dataTarefa" class="form-label">Data para entrega da tarefa</label>
@@ -69,17 +59,18 @@ suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est 
             </div>
 
             <div class="mt-5 mb-3">
-                <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                <button type="submit" class="btn btn-primary w-100" onclick="botaoSalvar()">Salvar</button>
             </div>
-    
             <div class="mb-5">
-                <button type="button" class="btn btn-secondary w-100">Voltar</button>
+                <button type="button" class="btn btn-secondary w-100" onclick="botaoVoltar()">Voltar</button>
             </div>
-        </form>
+            <input type="file" id="inputFileAnexo" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+        </div>
 
     </div>
 
     <!-- Modal de logout -->
+    <!--
     <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -96,13 +87,18 @@ suscipit quam at dui egestas tincidunt. Quisque vitae nulla rhoncus, cursus est 
             </div>
         </div>
     </div>
+    -->
 
-    <button class="btn-navegacao btn-navegacao-anterior">
-        <i class="bi bi-chevron-double-left"></i>
-    </button>
-    <button class="btn-navegacao btn-navegacao-proximo">
-        <i class="bi bi-chevron-double-right"></i>
-    </button>
+    <!--
+    <div id="botoesOperacoes" style="display: none;">
+        <button class="btn-navegacao btn-navegacao-anterior">
+            <i class="bi bi-chevron-double-left"></i>
+        </button>
+        <button class="btn-navegacao btn-navegacao-proximo">
+            <i class="bi bi-chevron-double-right"></i>
+        </button>
+    </div>
+    -->
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

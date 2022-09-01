@@ -2,7 +2,11 @@ https://developer.mozilla.org/pt-BR/docs/Web/API/File_API/Using_files_from_web_a
 
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 
+https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/
+
 https://www.twilio.com/blog/speech-recognition-browser-web-speech-api
+
+https://stiltsoft.com/google-chrome-how-to-use-the-web-speech-api/
 
 https://www.google.com/intl/en/chrome/demos/speech.html
 
