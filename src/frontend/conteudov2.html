@@ -27,10 +27,12 @@
         <div id="formulario" style="display: none;">
             <div class="row">
                 <div class="col-6 data-hora-aula">
-                    <span id="dataAula" style="color: #00B8AD">31 AGO</span> <i id="horaAula" class="bi bi-clock"></i> 10:00
+                    <span id="dataAula" style="color: #00B8AD"></span> <i id="horaAula" class="bi bi-clock"></i> 10:00
                 </div>
                 <div class="col-6" class="aula-turma">
-                    <span id="turma" class="badge bg-tema aula-turma">5º A</span>
+                    <span class="badge bg-tema aula-turma">
+                        <i class="bi bi-people texto-tema"></i> <span id="turma" class="texto-tema">5º A</span>
+                    </span>
                 </div>
             </div>
     
@@ -47,9 +49,9 @@
                     <div class="col">
                         <a href="javascript:void(0)" onclick="copiarConteudo()" role="button" class="btn btn-outline-secondary btn-sm w-100">Copiar do previsto</a>
                     </div>
-                    <div class="col">
+                    <!-- <div class="col">
                         <a id="ditarRealizado" href="javascript:void(0)" onclick="ditarConteudoRealizado(event)" role="button" class="btn btn-outline-secondary btn-sm w-100" style="display:none"><i class="bi bi-mic"></i> Ditar</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="mb-4 form-check form-switch">

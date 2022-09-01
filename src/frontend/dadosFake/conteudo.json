@@ -1,9 +1,9 @@
 {
     "codigoAula": 1234,
     "periodo": "2022",
-    "disciplina": "Matemática",
+    "disciplina": "Química",
     "turma": "5º ano A",
-    "aula": 34,
+    "aula": 3,
     "dia": "29 AGO",
     "hora": "10:40",
     "conteudoPrevisto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac fringilla arcu.",
