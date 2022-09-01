@@ -70,10 +70,10 @@ const handleFiles = function(files) {
 
 const carregarTela = function() {
     $("#dadosGerais").html(`
-        <h2>${dados.periodo.toHtmlEntities()} - ${dados.disciplina.toHtmlEntities()} - ${dados.turma.toHtmlEntities()}</h2>
-        <h3>Aula ${dados.aula} - ${dados.dia}</h3>
+        <h3 class="topo-texto">Aula ${dados.aula}, ${dados.disciplina.toHtmlEntities()}</h3>
     `);
-
+    $("#dataAula").html(dados.dia);
+    $("#turma").html(dados.turma.toHtmlEntities());
     $("#previsto").val(dados.conteudoPrevisto);
     $("#realizado").val(dados.conteudoRealizado);
     $("#possuiTarefa").prop("checked", dados.possuiTarefa);
@@ -148,7 +148,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
     recognition.onstart = function () {
         recognizing = true;
-        document.getElementById("ditarRealizado").innerHTML = "<span class=\"fa fa-microphone-slash\"></span> Parar";
+        document.getElementById("ditarRealizado").innerHTML = "<i class=\"bi bi-mic-mute-fill text-danger\"></i> Parar";
     };
 
     recognition.onerror = function (event) {
@@ -175,7 +175,7 @@ if (!('webkitSpeechRecognition' in window)) {
         if (ignore_onend) {
             return;
         }
-        document.getElementById("ditarRealizado").innerHTML = "<span class=\"fa fa-microphone\"></span> Ditar";
+        document.getElementById("ditarRealizado").innerHTML = "<i class=\"bi bi-mic\"></i> Ditar";
         if (!final_transcript) {
             return;
         }

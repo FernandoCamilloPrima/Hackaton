@@ -2,22 +2,13 @@
     "codigoAula": 1234,
     "periodo": "2022",
     "disciplina": "Matemática",
-    "turma": "5º A",
+    "turma": "5º ano A",
     "aula": 34,
-    "dia": "29/08/2022",
+    "dia": "29 AGO",
     "conteudoPrevisto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac fringilla arcu.",
     "conteudoRealizado": "",
-    "possuiTarefa": true,
+    "possuiTarefa": false,
     "conteudoTarefa": "",
-    "dataEntregaTarefa": "01/09/2022",
-    "anexos": [
-        {
-            "codigo": 1,
-            "nome": "Lista de exercícios.pdf"
-        },
-        {
-            "codigo": 2,
-            "nome": "Fórmulas.jpg"
-        }
-    ]
+    "dataEntregaTarefa": "",
+    "anexos": []
 }

@@ -12,58 +12,71 @@
 </head>
 
 <body>
-    <!-- <header class="cabecalho">
-        <div class="img-cabecalho">
-              <img src="./images/logo.png" alt="Matéria Lecionada">
+    <div class="topo">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <div style="font-size: 32px; width: 50px;">
+                    <span class="fa fa-arrow-left" onclick="botaoVoltar()"></span>
+                </div>
+                <div id="dadosGerais"></div>
+            </div>
         </div>
-        <h1 class="titulo">Matéria Lecionada</h1>
-        <button type="button" class="btn-cabecalho" data-bs-toggle="modal" data-bs-target="#logoutModal">
-              <i class="bi bi-person-circle"></i>
-        </button>
-    </header> -->
+    </div>
 
-    <div class="container">
-        <div id="dadosGerais">
-        </div>
-
+    <div class="container" style="margin-top: 90px;">
         <div id="formulario" style="display: none;">
-            <div class="mt-3 mb-4">
-                <label for="previsto" class="form-label">Conteúdo previsto</label>
+            <div class="row">
+                <div class="col-6" style="font-size: 25px; font-weight:bold; color: #00B8AD;">
+                    <span id="dataAula" style="color: #00B8AD">31 AGO</span> <i class="bi bi-clock" style="color: #00B8AD; font-size: 21px; font-weight: bold;"></i> 10:00
+                </div>
+                <div class="col-6" style="font-size: 22px;">
+                    <span id="turma" class="badge bg-tema">5º A</span>
+                </div>
+            </div>
+    
+            <div class="mt-3 mb-4" style="border-top: 2px solid #EEEEEE;">
+                <label for="previsto" class="form-label mt-4"><i class="bi bi-chat-dots"></i> Conteúdo previsto</label>
                 <textarea id="previsto" name="previsto" class="form-control" rows="3"></textarea>
             </div>
-            <div class="mb-4">
-                <label for="realizado" class="form-label">Conteúdo realizado</label>
+            <div class="mb-0">
+                <label for="realizado" class="form-label"><i class="bi bi-check"></i> Conteúdo realizado</label>
                 <textarea id="realizado" name="realizado" class="form-control" rows="3"></textarea>
-                <a href="javascript:void(0)" onclick="copiarConteudo()" role="button" class="btn btn-secondary btn-sm mt-1 w-100">Copiar do previsto</a>
-                <a id="ditarRealizado" href="javascript:void(0)" onclick="ditarConteudoRealizado(event)" role="button" class="btn btn-secondary btn-sm mt-1 w-100" style="display:none"><span class="fa fa-microphone"></span> Ditar</a>
+            </div>
+            <div class="mt-2 mb-5">
+                <div class="row">
+                    <div class="col">
+                        <a href="javascript:void(0)" onclick="copiarConteudo()" role="button" class="btn btn-outline-secondary btn-sm w-100">Copiar do previsto</a>
+                    </div>
+                    <div class="col">
+                        <a id="ditarRealizado" href="javascript:void(0)" onclick="ditarConteudoRealizado(event)" role="button" class="btn btn-outline-secondary btn-sm w-100" style="display:none"><i class="bi bi-mic"></i> Ditar</a>
+                    </div>
+                </div>
             </div>
             <div class="mb-4 form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="possuiTarefa" name="possuiTarefa" value="S" onchange="habilitarTarefa()">
-                <label class="form-check-label" for="possuiTarefa">Possui tarefa</label>
+                <label class="form-check-label" for="possuiTarefa">Este conteúdo possui tarefa</label>
             </div>
             <div id="camposTarefa" style="display: none;">
                 <div class="mb-4">
-                    <label for="conteudoTarefa" class="form-label">Conteúdo da tarefa</label>
+                    <label for="conteudoTarefa" class="form-label"><i class="bi bi-newspaper"></i> Conteúdo da tarefa</label>
                     <textarea id="conteudoTarefa" name="conteudoTarefa" class="form-control" rows="3"></textarea>
                 </div>
                 <div class="mb-4">
-                    <label class="form-label">Anexos</label>
+                    <label class="form-label"><i class="bi bi-paperclip"></i> Anexos</label>
                     <ul id="anexosTarefa" class="list-group">
                     </ul>
-                    <a href="javascript:void(0)" onclick="uploadAnexo()" role="button" class="btn btn-secondary btn-sm mt-1 w-100">Anexar arquivo(s)</a>
+                    <a href="javascript:void(0)" onclick="uploadAnexo()" role="button" class="btn btn-outline-secondary btn-sm mt-1 w-100">Anexar arquivo(s)</a>
                 </div>
                 <div class="mb-4">
-                    <label for="dataTarefa" class="form-label">Data para entrega da tarefa</label>
+                    <label for="dataTarefa" class="form-label"><i class="bi bi-newspaper"></i> Data para entrega da tarefa</label>
                     <input type="date" id="dataTarefa" name="dataTarefa" class="form-control" />
                 </div>
             </div>
 
             <div class="mt-5 mb-3">
-                <button type="submit" class="btn btn-primary w-100" onclick="botaoSalvar()">Salvar</button>
+                <button type="submit" class="btn btn-acao-principal w-100" onclick="botaoSalvar()">Salvar</button>
             </div>
-            <div class="mb-5">
-                <button type="button" class="btn btn-secondary w-100" onclick="botaoVoltar()">Voltar</button>
-            </div>
+
             <input type="file" id="inputFileAnexo" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
         </div>
 

@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    color: #555555;
+}
 
 .cabecalho{
     width: 100%;
@@ -82,9 +87,11 @@
 
 .form-label {
     font-size: 18px;
-    font-weight: 400;
-    font-family: sans-serif;
-    color: #114f0e;
+    font-weight: bold;
+}
+
+.form-label i {
+    margin-right: 8px;
 }
 
 .btn-navegacao {
@@ -113,3 +120,37 @@
   .btn-navegacao-proximo {
     right: 0;
   }
+
+.topo {
+    border-bottom: 2px solid #EEEEEE;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+}
+
+.topo-texto {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.bg-tema {
+    background-color: #00b8ac24;
+    color: #00B8AD;
+}
+
+.btn-outline-secondary {
+    border-radius: 10px;
+}
+
+.btn-acao-principal {
+    background-color: #00B8AD;
+    color: white;
+    border-radius: 10px;
+}
+.btn-acao-principal:hover {
+    color: white;
+}
