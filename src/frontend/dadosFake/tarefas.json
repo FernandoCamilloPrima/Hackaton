@@ -1,0 +1,31 @@
+{
+    "periodo": "2022",
+    "disciplina": "Matemática",
+    "turma": "5º A",
+    "aula": 34,
+    "dia": "29/08/2022",
+    "tarefaConteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac fringilla arcu.",
+    "tarefaDataEntrega": "01/09/2022",
+    "alunos": [
+        {
+            "codigo": 1,
+            "nome": "Abel Pereira Goulart",
+            "situacao": "E"
+        },
+        {
+            "codigo": 2,
+            "nome": "Caio de Oliveira Ramos",
+            "situacao": "E"
+        },
+        {
+            "codigo": 3,
+            "nome": "Maria Aparecida dos Santos",
+            "situacao": "E"
+        },
+        {
+            "codigo": 4,
+            "nome": "Noel Cristiano Pereira Silva",
+            "situacao": "E"
+        }
+    ]
+}
